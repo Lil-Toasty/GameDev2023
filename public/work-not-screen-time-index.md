@@ -8,3 +8,6 @@ Learn how to put pictures in a row
 
 sep 19
 do blender stuff
+
+sep 21
+vs code working
