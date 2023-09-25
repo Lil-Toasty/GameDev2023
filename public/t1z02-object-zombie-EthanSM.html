@@ -8,7 +8,7 @@ let myHuman = {
     'zombie' : fulse,
     'name' : 'dan'
 }
-let myHuman2 = {
+let myHuman2  = {
     'zombie' : fulse,
     'name' : 'ethan'
 }
@@ -20,19 +20,25 @@ let myZombie2 = {
 </script>
 
 
-is <select size="1">
+is <select id="mySelect01" size=1 onChange="{
+myInput = document.getElementById('mySelect01').value 
+    if (myZombie.name == myInput && myZombie.zombie){
+        document.getElementById('myDive01').innerHTML = myInput + ' is a Zombie'
+}   else if (myHuman.name == myInput && myHuman.zombie){
+     document.getElementById('myDiv01').innerHTML = myInput + 'is a Zombie'
+}  else {
+    document.getElementById('myDiv01'),innerWidth = myInput + 'is not a Zombie'
+}
+
+}">
+    <option>
     <option>jon
     <option>dan
     <option>ethan
     <option>mr ellis
 </select> a Zombie?<br>
 
-
-<input type="button" value="check it" onclick="{
-alert(myZombie.name + ' is a ' + myZombie.zombie)
-}"><br>
-<div id="myDiv1">...</div>
-
+<div id="myDiv01">...</div>
 
 
 
