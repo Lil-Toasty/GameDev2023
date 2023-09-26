@@ -1,20 +1,25 @@
 <H3 align="center">t1z02-object-zombie-EthanSM.html</H3>
+<select id="myOption" onchange="zombieChecker(document.getElementById('myOption'))">
+    <option>Select a name!</option>
+    <option value="jon">jon</option>
+    <option value="dan">dan</option>
+</select> a Zombie?<br>
+
+<p id="myDiv01">...</p><br>
 <script>
 let myZombie = {
     'zombie' : true,
     'name' : 'jon'
 }
 let myHuman = {
-    'zombie' : fulse,
+    'zombie' : false,
     'name' : 'dan'
 }
 
+let myInput = document.getElementById('mySelect01').value 
 
-</script>
-
-
-is <select id="mySelect01" size=1 onChange="{
-myInput = document.getElementById('mySelect01').value 
+function zombieChecker(myOption) {
+    let myInput = myOption.value
     if (myZombie.name == myInput && myZombie.zombie){
         document.getElementById('myDive01').innerHTML = myInput + ' is a Zombie'
 }   else if (myHuman.name == myInput && myHuman.zombie){
@@ -22,16 +27,8 @@ myInput = document.getElementById('mySelect01').value
 }  else {
     document.getElementById('myDiv01').innerHTML = myInput + 'is not a Zombie'
 }
-
-}">
-    <option>
-    <option>jon
-    <option>dan
-    <option>ethan
-    <option>mr ellis
-</select> a Zombie?<br>
-
-<div id="myDiv01">...</div>
+}
+</script>
 
 
 

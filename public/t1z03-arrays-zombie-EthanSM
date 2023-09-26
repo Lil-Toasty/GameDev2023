@@ -1,0 +1,30 @@
+<H3 align="center">t1z02-array-zombie-EthanSM.html</H3>
+<script>
+
+let myThingName = ['jon','dan','ethan' ]
+let myThingZombie = [true, false, true]
+
+</script>
+
+is <select id="mySelect01" size=1 onChange="{
+    myInput =document.getElementById('mySelect01').value
+    for (myLoop=0; myLoop < 4; myLoop++){
+      if (myThingName[myLoop] == myInput){
+       if (myThingZombie[myLoop]){
+            document.getElementById('myDiv01').innerHTML = myInput + ' is a zombie'
+         } else {
+            document.getElementById('mydiv01').innerHTML = myInput + ' is not a zombie'
+
+
+         }
+     }
+ }
+
+}">
+    <option>
+    <option>dan
+    <option>jon
+    <option>ethan
+</select > a Zombie<br>
+
+<div id="myDive01">...</div>
