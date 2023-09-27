@@ -11,3 +11,5 @@ do blender stuff
 
 sep 21
 vs code working
+
+sep 27
