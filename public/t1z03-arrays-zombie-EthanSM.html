@@ -2,31 +2,28 @@
 
 
 <script>
-
-let myThingName = ['jon','dan','ethan' ]
-let myThingZombie = [true, false, true]
-
-</script>
-
-is <select id="mySelect01" size=1 onChange="{
-    myInput =document.getElementById('mySelect01').value
-    for (myLoop=0; myLoop < 4; myLoop++){
-      if (myThingName[myLoop] == myInput){
-       if (myThingZombie[myLoop]){
-            document.getElementById('myDiv01').innerHTML = myInput + ' is a zombie'
-         } else {
-            document.getElementById('mydiv01').innerHTML = myInput + ' is not a zombie'
-
-
-         }
-     }
- }
-
-}">
-    <option>
-    <option>dan
-    <option>jon
-    <option>ethan
-</select > a Zombie<br>
-
-<div id="myDive01">...</div>
+    let myThingName = ['jon', 'dan', 'ethan'];
+    let myThingZombie = [true, false, true];
+    
+    function checkZombieStatus() {
+        let myInput = document.getElementById('mySelect01').value;
+        for (let myLoop = 0; myLoop < 3; myLoop++) {
+            if (myThingName[myLoop] == myInput) {
+                if (myThingZombie[myLoop]) {
+                    document.getElementById('myDiv01').innerHTML = myInput + ' is a zombie';
+                } else {
+                    document.getElementById('myDiv01').innerHTML = myInput + ' is not a zombie';
+                }
+            }
+        }
+    }
+    </script>
+    
+    <select id="mySelect01" size="1" onChange="checkZombieStatus()">
+        <option value="">Select a name</option>
+        <option value="dan">dan</option>
+        <option value="jon">jon</option>
+        <option value="ethan">ethan</option>
+    </select> a Zombie<br>
+    
+    <div id="myDiv01">...</div>
