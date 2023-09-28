@@ -1,0 +1,24 @@
+<h2 align=center> t1z04-Classes-by-EthanSM </h2>
+<script>
+
+
+    class myPerson {
+        constructor(passName, passAge){
+            this.myName = passName;
+            this.myAge = passAge;
+        }
+
+    myShow(){
+        document.getElementById('myDive01').innerHTML = 'hello '+ this.myName + '.you are ' + this.myAge + 'years old<br>'
+    } 
+
+} // end class myAnimal
+
+</script>
+
+<input type="button" value="class Preson" onClick="{
+    myCharacter = new myPerson('elon', 52)
+    myCharacter.myShow()
+}">
+
+<div id"myDiv01">...</div>
