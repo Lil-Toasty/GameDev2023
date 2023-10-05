@@ -15,6 +15,18 @@ for global variables mr.ellis prefers to use document.myVarName
     document.getElementById('myDiv01').innerHTML = myIn01
 </pre>
 
+<h4> Example working code</h4>
 
+<input id="myText01" type=text value="The dog "><br>
 
+<input type=button value="show variable" onclick="{
+    let myIn01 = document.getElementById('myText01').value
+    document.getElementById('myDiv01').innerHTML = myIn01
+}"><br>
 
+<input type=button value="using no variable" oneclick="{
+    document.getElementById('myDiv01').innerHTML = 
+        document.getElementById('myText01').value
+}"><br>
+
+<div id="myDiv01">...</div>
