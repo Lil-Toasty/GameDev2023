@@ -1,0 +1,24 @@
+version 0.0.1.
+
+<h2 align=center>t1a05-input-output-EthanSM</h2>
+
+<a herf="https://www.w3school.com/jsref/prop_html_innerhtml.asp">Good reference to input output javascript innerHTML value</a>
+
+<h4>Example input output code</h4>
+<pre>
+    let myIn01 = document.getElementById('myDiv01').value
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' squard = ' + myIn01*myIn01
+</pre>
+
+<h4> Example working code</h4>
+
+<input id="myNum01" type=number value="4" ><br>
+
+<input type=button value="myEvent squares" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    let myAnswer = myIn01 * myIn01
+    document.getElementById('myDiv01').innerHTML = 
+        myIn01 + ' squared = ' + myAnswer
+}"><br>
+
+<div id="myDiv01">...</div>
