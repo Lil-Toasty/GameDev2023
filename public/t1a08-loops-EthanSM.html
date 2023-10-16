@@ -1,3 +1,35 @@
 version 0.0.1 
 
 <H2 ALIGN=center> t1a08-loops-EthanSM.htmal </h2>
+
+Max loop: <input id="myNum01" type=number value="4" ><br>
+weird number: <input id="myWeird" type=number value="2" ><br>
+
+<input type=button value="basic for loop with decision" onlick="{
+    document.getElementById('myDiv01').innerHTML = ''
+    let myTemp = ''
+
+    let myMax = parseInt(document.getElementById('myNum01').value) 
+
+    for (let myLoop = 0; myLoop <myMax ; myLoop++){
+
+        if (myLoop * 2 > myMax){
+
+        }
+        myTemp += 'loop number: ' + myLoop + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp
+}">  
+
+
+<input type=button value="basic for loop only" onclick="{
+    let myTemp = ''
+    let myMax = parseInt(document.getElementById('myNum01').value)
+    for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+        myTemp += 'Loop number: ' + myLoop + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+
+
