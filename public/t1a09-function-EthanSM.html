@@ -2,9 +2,24 @@ version 0.0.1
 
 <script>
 
+function myExampleFunction(){
+    let myIn01 = parseInt(document.getElementById('myText01').value)
+    let mySum01 = myIn01 + myIn01
+    let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum01
+    return myReply
+
+}
     
 </script>
 
 
 <h2 align=center>t1a09-function-EthanSM</h2>
+
+<input type=text id="myText01" value="3"><br>
+
+<input type=button id="myText01" value="Function Example" onClick="{
+    document.getElementById('myDiv01').innerHTML = myExampleFunction()
+}">
+
+<div id="myDiv01">...</div>
 
