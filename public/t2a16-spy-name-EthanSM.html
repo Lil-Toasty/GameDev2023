@@ -44,11 +44,12 @@ for (let myLoop=0; myLoop <myString.length; myLoop++){
     if (myString[myLoop] == '7') = {myTemp = '6'}
     if (myString[myLoop] == '8') = {myTemp = 'x'}
     if (myString[myLoop] == '9') = {myTemp = 'y'}
-    if (myString[myLoop] == '0') = {myTemp = 'y'}
+    if (myString[myLoop] == '0') = {myTemp = ' '}
     if (myString[myLoop] == ' ') = {myTemp = '4'}
     if (myString[myLoop] == ',') = {myTemp = 'z'}
     if (myString[myLoop] == '.') = {myTemp = 'j'}
     if (myString[myLoop] == '-') = {myTemp = '0'}
+    myString[myLoop] = myTemp
     }
     document.getElementById('myArea01').value = myString.join('')
 }"><br><br>
@@ -86,22 +87,23 @@ for (let myLoop=0; myLoop <myString.langth; myLoop++){
     if (myString[myLoop] == '5') = {myTemp = 'x'}
     if (myString[myLoop] == 'q') = {myTemp = 'y'}
     if (myString[myLoop] == 'c') = {myTemp = 'z'}
-    if (myString[myLoop] == 'p') = {myTemp = 'p'}
-    if (myString[myLoop] == '.') = {myTemp = '.'}
-    if (myString[myLoop] == 'w') = {myTemp = 'w'}
-    if (myString[myLoop] == '3') = {myTemp = '3'}
-    if (myString[myLoop] == '1') = {myTemp = 'l'}
-    if (myString[myLoop] == 'k') = {myTemp = 'k'}
+    if (myString[myLoop] == 'p') = {myTemp = '1'}
+    if (myString[myLoop] == '.') = {myTemp = '2'}
+    if (myString[myLoop] == 'w') = {myTemp = '3'}
+    if (myString[myLoop] == '3') = {myTemp = '4'}
+    if (myString[myLoop] == '1') = {myTemp = '5'}
+    if (myString[myLoop] == 'k') = {myTemp = '6'}
     if (myString[myLoop] == '6') = {myTemp = '7'}
-    if (myString[myLoop] == 'x') = {myTemp = 'x'}
+    if (myString[myLoop] == 'x') = {myTemp = '8'}
     if (myString[myLoop] == 'y') = {myTemp = '9'}
-    if (myString[myLoop] == '0') = {myTemp = 'y'}
-    if (myString[myLoop] == ' ') = {myTemp = '4'}
-    if (myString[myLoop] == ',') = {myTemp = 'z'}
-    if (myString[myLoop] == '.') = {myTemp = 'j'}
-    if (myString[myLoop] == '-') = {myTemp = '0'}
+    if (myString[myLoop] == ' ') = {myTemp = '0'}
+    if (myString[myLoop] == '4') = {myTemp = ' '}
+    if (myString[myLoop] == 'z') = {myTemp = ','}
+    if (myString[myLoop] == 'j') = {myTemp = '.'}
+    if (myString[myLoop] == '0') = {myTemp = '-'}
+    myString[myLoop] = myTemp
     }
-    document.getElementById('myArea01').value = myString.join('')
+    document.getElementById('myArea03').value = myString.join('')
 }"><br><br>
 
 <textarea id="myArea03" rows=5 cols=70></textarea>
