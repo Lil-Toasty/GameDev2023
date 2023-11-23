@@ -1,0 +1,23 @@
+<h2>t2a18-local-storage-EthanSM.html Instructions:</h2>
+
+
+<body onload="{
+    myStorage = localStorage.getItem('myStoredText')
+    if(myStorage  != null){
+        document.getElementById('myText01').value = myStorage
+    }
+}">
+
+<body onunload="{
+    localstorage.setItem('myStoredText',document.getElementById('myText01').value)
+}">
+
+<input type="button" value="Store Text" onClick="{
+    localStorage.setItem('myStoredText', document.getElementById('mytext01').value)
+    alert(document.getElementById('mytext01').value + ' \nHas been stored')
+    document.getElementById('myText01').value ''
+}">
+
+<input type="button" value="Retrieve Text" onClick="{
+    document.getElementById('myText01').value = localStorage.getItem('myStoredText')
+}">
