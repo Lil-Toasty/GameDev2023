@@ -28,9 +28,39 @@ function myHitOther(my1,my2){
 }
 
 function myCheckHit(){
+    if ( myHitOther('myImg01','myImg02') ){
+        alert('you lose 2')
+        //document.getElementById('myImg01').style.left = '20px'
+        location = 'https://www.gogle.ca'
+    }    
 
-
+    if ( myHitOther('myImg01','myImg03') ){
+        alert('you lose 3')
+       //document.getElementById('myImg01').style.left = '20px'
+    }
     
 }
-
 </script>
+
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"
+src="myImage01.jpg">
+<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;"
+src="myImage02.jpg">
+<img id="myImg03" style="position:absolute; width:100px; height:80px; top:0px; left:500px;"
+src="myImage03.jpg">
+
+<input type=button value="Auto Background Left" onClick="{
+    clearInterval(myclock)
+    let myTemp = '100px 0px'
+    myClock - setInterval(function(){
+        myGlobal1x -= 5
+        myTemp = myGlobal1x + 'px 0px'
+        document.getElementById('myBody').style.backgroundPosition = myTemp
+    }, 10)
+}">
+
+<input type=button value="Image Right Fast Button ontouchstart"="{this.click(); event.preventDefault();}"
+onclick="{
+    document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+    myCheckHit()
+}"><br><br>
