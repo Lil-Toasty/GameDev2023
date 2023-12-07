@@ -2,3 +2,21 @@ version 0.0.1
 
 <h2 align=center>t1a07-decision-EthanSM.html</h2>
 
+<input id="myNum01" type=number value="4" ><br>
+
+<input type=button value="simple if statement for Decision makeing" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    let (myIn01 >= 3){
+        document.getElementById('myDiv01').innerHTML = myIn01 ' is greater than 3'
+    }
+}">
+
+<input type=button value="if...else" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    if (myIn01 >= 3){
+        document.getElementById('myDiv01').innerHTML = myIn01 + 'is greater than 3'
+    } else {
+        document.getElementById('myDiv01').innerHTML = myIn01 + 'is less than 3'
+    }
+}">
+
