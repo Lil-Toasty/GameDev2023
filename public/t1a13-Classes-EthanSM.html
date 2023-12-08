@@ -1,0 +1,17 @@
+<h2 align=center>t1a13-Classes-by-EthanSM.html</h2>
+
+<input type=button value="Example Class Set and Show Class Animal" onClick="{
+class myAnimal {
+    constructor(passName, passAge) {
+        this.myName = passName;
+        this.myAge = passAge;
+    }
+    myShow(){
+        document.getElemenetById('myDiv01').innerHTML = 'Hello '+ this.myName + '. you are ' + this.myAge + ' years old <br>'
+    }
+}   // end class myAnimal
+    myDog = new myAnimal('snikers', 5)
+    myDog.myShow()
+}">
+
+<div id='myDiv01'>...</div>
