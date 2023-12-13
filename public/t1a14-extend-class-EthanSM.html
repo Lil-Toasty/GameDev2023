@@ -1,0 +1,37 @@
+<sript>
+
+class myAnimal {
+    constructor(passName, passName) {
+        this.myName = passName;
+        this.myAge = passAge;
+    }
+    myShow(){
+        documents.getElementById('myDiv01').innerHTML = 'hell '+ this.myName+'<br>'
+    }
+}    
+</sript>
+
+<h2 align=center>t1a14-Extended-class-EthanSM</h2>
+
+<input type=button value="Example Class Set and Show Class Animal" onCLick="{
+
+    myDog = new myAnimal('Kevin', 5)
+    myDog.myShow()
+
+}">
+
+<input type=button value="Example Extend Class Animal" onClick="{
+
+    class myCat extends myAnimal {
+        myShow(){
+            document.getElementById('myDiv01').innerHTML = this.myName + 'is a great cat<br>'
+        }
+    }
+
+
+
+        mypet = new myCat('Fluffy', 14)
+        mypet.myShow()
+}">
+
+<div id="myDiv01">...</div>
