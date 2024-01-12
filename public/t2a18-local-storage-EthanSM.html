@@ -1,23 +1,33 @@
 <h2>t2a18-local-storage-EthanSM.html Instructions:</h2>
 
 
-<body onload="{
-    myStorage = localStorage.getItem('myStoredText')
-    if(myStorage  != null){
-        document.getElementById('myText01').value = myStorage
-    }
-}">
+<body onload="loadStoredText()">
 
-<body onunload="{
-    localstorage.setItem('myStoredText',document.getElementById('myText01').value)
-}">
-
-<input type="button" value="Store Text" onClick="{
-    localStorage.setItem('myStoredText', document.getElementById('mytext01').value)
-    alert(document.getElementById('mytext01').value + ' \nHas been stored')
-    document.getElementById('myText01').value ''
-}">
-
-<input type="button" value="Retrieve Text" onClick="{
-    document.getElementById('myText01').value = localStorage.getItem('myStoredText')
-}">
+    <input type="text" id="myText01">
+    
+    <input type="button" value="Store Text" onClick="storeTextAndAlert()">
+    
+    <input type="button" value="Retrieve Text" onClick="retrieveText()">
+    
+    <script>
+        function loadStoredText() {
+            var myStorage = localStorage.getItem('myStoredText');
+            if (myStorage != null) {
+                document.getElementById('myText01').value = myStorage;
+            }
+        }
+    
+        function storeText() {
+            localStorage.setItem('myStoredText', document.getElementById('myText01').value);
+        }
+    
+        function storeTextAndAlert() {
+            storeText();
+            alert(document.getElementById('myText01').value + '\nHas been stored');
+            document.getElementById('myText01').value = ''; // Clear the input after storing
+        }
+    
+        function retrieveText() {
+            document.getElementById('myText01').value = localStorage.getItem('myStoredText');
+        }
+    </script>
