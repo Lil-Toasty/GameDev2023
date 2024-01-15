@@ -51,6 +51,7 @@ function myCheckHit(){
 
 <img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="myImage01.jpg">
 <img id="myImg02" style="position:absolute; width:100px; height:80px; top: 843px; left:1772px;" src="myImage02.jpg">
+<img id="myImg03" style="position:absolute; width:100px; height:80px; top: 80pxpx; left:50px;"  src="myImage03.jpg">
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
@@ -155,69 +156,7 @@ function myCheckHit(){
   // Initial update
   updatePosition();
 </script>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-      /* Style for the images */
-      img {
-          position: absolute;
-      }
-  </style>
-  <title>Simple Game</title>
-</head>
-<body>
-  <!-- Image that should be followed -->
-  <img id="myImg01" src="path/to/myImg01.png" alt="Target Image">
 
-  <!-- Image that follows and triggers game over on contact -->
-  <img id="myImg03" src="path/to/myImg03.png" alt="Follower Image">
-
-  <script>
-      // Get the image elements
-      
-      const myImg03 = document.getElementById('myImg03');
-
-      // Function to check for collision
-      function isColliding(element1, element2) {
-          const rect1 = element1.getBoundingClientRect();
-          const rect2 = element2.getBoundingClientRect();
-
-          return !(rect1.right < rect2.left || 
-                   rect1.left > rect2.right || 
-                   rect1.bottom < rect2.top || 
-                   rect1.top > rect2.bottom);
-      }
-
-      // Function to handle game over
-      function gameOver() {
-          alert('Game Over');
-          // You can add reset logic here
-      }
-
-      // Function to update position
-      function updatePosition() {
-          // Get the current position of myImg03
-          const currentPos = myImg03.getBoundingClientRect();
-
-          // Move myImg03 towards myImg01
-          // For simplicity, I'm using a constant speed, you might want to adjust this
-          myImg03.style.left = currentPos.left + 1 + 'px';
-          myImg03.style.top = currentPos.top + 1 + 'px';
-
-          // Check for collision
-          if (isColliding(myImg01, myImg03)) {
-              // Trigger game over if there is a collision
-              gameOver();
-          } else {
-              // Continue updating position if no collision
-              requestAnimationFrame(updatePosition);
-          }
-      }
-
-      // Start the game by calling the updatePosition function
-      updatePosition();
-  </script>
 
 
 </body>
